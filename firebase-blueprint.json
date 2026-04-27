@@ -1,0 +1,176 @@
+{
+  "entities": {
+    "Evaluation": {
+      "title": "Real Estate Evaluation",
+      "description": "A comprehensive evaluation of a real estate investment property.",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" },
+        "propertyId": {
+          "type": "object",
+          "properties": {
+            "address": { "type": "string" },
+            "subdivision": { "type": "string" },
+            "yearBuilt": { "type": "number" },
+            "zoning": { "type": "string" },
+            "sqmBuilding": { "type": "number" },
+            "sqmLand": { "type": "number" },
+            "titleType": { "type": "string" },
+            "titleDate": { "type": "string", "format": "date" }
+          }
+        },
+        "valuationFinancials": {
+          "type": "object",
+          "properties": {
+            "purchasePrice": { "type": "number" },
+            "pricePerSqmBuilding": { "type": "number" },
+            "pricePerSqmLot": { "type": "number" },
+            "marketValue": { "type": "number" },
+            "buildingMarketValuePerSqm": { "type": "number" },
+            "potentialEquityAtClosing": { "type": "number" },
+            "potentialMonthlyRentAfterRepairs": { "type": "number" },
+            "airbnbPotential": { "type": "string" },
+            "exitStrategy": { "type": "string" }
+          }
+        },
+        "operatingCosts": {
+          "type": "object",
+          "properties": {
+            "realEstateTax": { "type": "number" },
+            "trashCost": { "type": "number" },
+            "lawn": { "type": "number" },
+            "waterBill": { "type": "number" },
+            "maintenance": { "type": "number" },
+            "floodInsurance": { "type": "number" },
+            "liabilityInsurance": { "type": "number" },
+            "homeownerHazardInsurance": { "type": "number" },
+            "homeAssociationFee": { "type": "number" },
+            "deferredMaintenance": { "type": "number" }
+          }
+        },
+        "structureConstruction": {
+          "type": "object",
+          "properties": {
+            "foundations": { "type": "string" },
+            "constructionMaterialQuality": { "type": "string" },
+            "blocksCement": { "type": "string" },
+            "insulation": { "type": "string" },
+            "attic": { "type": "string" },
+            "roof": { "type": "string" },
+            "driveway": { "type": "string" },
+            "generalObservableConditions": { "type": "string" },
+            "systemsEndLifespan": { "type": "array", "items": { "type": "string" } }
+          }
+        },
+        "interiorSpacesRepairs": {
+          "type": "object",
+          "additionalProperties": { "type": "string" }
+        },
+        "finishesFixturesRepairs": {
+          "type": "object",
+          "additionalProperties": { "type": "object" }
+        },
+        "mechanicalSystems": {
+          "type": "object",
+          "properties": {
+            "electrical": { "type": "string" },
+            "plumbing": { "type": "string" },
+            "sewer": { "type": "string" },
+            "meteredWater": { "type": "string" },
+            "meteredElectricity": { "type": "string" },
+            "meteredGas": { "type": "string" },
+            "generalObservableConditions": { "type": "string" }
+          }
+        },
+        "conditionCompliance": {
+          "type": "object",
+          "properties": {
+            "otherNecessaryUpgrades": { "type": "string" },
+            "otherRepairs": { "type": "string" },
+            "pestInspection": { "type": "string" },
+            "buildingPermitHistory": { "type": "string" },
+            "openBuildingPermits": { "type": "boolean" },
+            "buildingViolations": { "type": "boolean" },
+            "homeConstructionWarranty": { "type": "boolean" },
+            "sellerDamageDisclosures": { "type": "string" },
+            "floodZone": { "type": "boolean" }
+          }
+        },
+        "neighborhoodLocation": {
+          "type": "object",
+          "properties": {
+            "landscaping": { "type": "string" },
+            "transportation": { "type": "string" },
+            "elementarySchools": { "type": "string" },
+            "servicesNearby": { "type": "string" },
+            "generalObservableConditions": { "type": "string" },
+            "shoppingMall": { "type": "string" },
+            "busStop": { "type": "string" },
+            "hospital": { "type": "string" },
+            "schools": { "type": "string" },
+            "pedestrianArea": { "type": "string" }
+          }
+        },
+        "riskAreaAssessment": {
+          "type": "object",
+          "properties": {
+            "crimeRating": { "type": "string" },
+            "vacancyDuration": { "type": "string" },
+            "traffic": { "type": "string" },
+            "constructionAreaNearby": { "type": "boolean" },
+            "redevelopmentPlans": { "type": "string" },
+            "streetHistory": { "type": "string" },
+            "councilRepresentative": { "type": "string" }
+          }
+        },
+        "marketInvestmentContext": {
+          "type": "object",
+          "properties": {
+            "comparablePropertyPrice": { "type": "string" },
+            "mobilityMigratoryPatterns": { "type": "string" },
+            "homeAssociation": { "type": "string" }
+          }
+        },
+        "propertyManagementAvailability": {
+          "type": "object",
+          "properties": {
+            "isOccupiedByTenant": { "type": "string" },
+            "currentMonthlyRent": { "type": "number" },
+            "isProfessionalManagementAvailable": { "type": "string" },
+            "qualityOfManagementServices": { "type": "string" }
+          }
+        },
+        "transactionContact": {
+          "type": "object",
+          "properties": {
+            "name": { "type": "string" },
+            "phone": { "type": "string" },
+            "deliveryDate": { "type": "string", "format": "date" }
+          }
+        },
+        "financialRatios": {
+          "type": "object",
+          "properties": {
+            "year1Noi": { "type": "number" },
+            "loanPercent": { "type": "number" },
+            "repairCost": { "type": "number" },
+            "closingCost": { "type": "number" },
+            "investedCash": { "type": "number" },
+            "debt": { "type": "number" },
+            "capRate": { "type": "number" },
+            "cashOnCash": { "type": "number" }
+          }
+        }
+      },
+      "required": ["userId", "propertyId"]
+    }
+  },
+  "firestore": {
+    "evaluations/{evaluationId}": {
+      "schema": { "$ref": "#/entities/Evaluation" },
+      "description": "Stores real estate evaluations created by users."
+    }
+  }
+}
